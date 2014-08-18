@@ -1,5 +1,7 @@
 #Connect SDK Android
-Connect SDK is an open source framework that unifies device discovery and connectivity by providing one set of methods that work across multiple television platforms and protocols.
+Connect SDK is an open source framework that connects your mobile apps with multiple TV platforms. Because most TV platforms support a variety of protocols, Connect SDK integrates and abstracts the discovery and connectivity between all supported protocols.
+
+This repository contains the lite version of the Connect SDK project, and does not include support for platforms that require heavy and/or external dependencies. For the full Connect SDK, clone the [main repository](https://github.com/ConnectSDK/Connect-SDK-Android).
 
 For more information, visit our [website](http://www.connectsdk.com/).
 
@@ -10,33 +12,28 @@ For more information, visit our [website](http://www.connectsdk.com/).
 ##Dependencies
 This project has the following dependencies.
 * [Java-WebSocket library](https://github.com/TooTallNate/Java-WebSocket)
-* [Android Support v7 Libraries](https://developer.android.com/tools/support-library/setup.html)
-  - appcompat
-  - mediarouter
-* [Google Play Services](http://developer.android.com/google/play-services/setup.html)
+* [Connect-SDK-Android-Core](https://github.com/ConnectSDK/Connect-SDK-Android-Core) submodule
 
 ##Including Connect SDK in your app
 
 1. Setup up your dependencies, listed above
-2. Clone Connect-SDK-Android project (or download & unzip)
+2. Clone Connect-SDK-Android-Lite project (or download & unzip)
 3. Open Eclipse
 4. Click File > Import
 5. Select `Existing Android Code Into Workspace` and click Next
-6. Browse to the Connect-SDK-Android project folder and click Open
+6. Browse to the Connect-SDK-Android-Lite project folder and click Open
 7. Click Finish
-8. Right-click the Connect-SDK-Android project and select Properties
+8. Right-click the Connect-SDK-Android-Lite project and select Properties
 9. In the Library pane of the Android tab, add the following library references
-   - android-support-v7-appcompat
-   - android-support-v7-mediarouter
-   - google-play-services_lib
+   - Connect-SDK-Android-Core
 10. **You must update these libraries to API 10 in their manifest.**
 11. Click OK
 12. Right-click your project and select Properties
-13. In the Library pane of the Android tab, add the Connect-SDK-Android project
+13. In the Library pane of the Android tab, add the Connect-SDK-Android-Lite project
 14. Set up your manifest file as per the instructions below
 
 ###Permissions to include in manifest
-* Required for SSDP & Chromecast/Zeroconf discovery
+* Required for SSDP & Zeroconf discovery
  - `android.permission.INTERNET`
  - `android.permission.CHANGE_WIFI_MULTICAST_STATE`
 * Required for interacting with devices
@@ -51,20 +48,6 @@ This project has the following dependencies.
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-```
-
-###Metadata for application tag
-This metadata tag is necessary to enable Chromecast support.
-
-```xml
-<application ... >
-    ...
-    
-    <meta-data
-        android:name="com.google.android.gms.version"
-        android:value="@integer/google_play_services_version" />
-        
-</application>
 ```
 
 ###Proguard configuration
