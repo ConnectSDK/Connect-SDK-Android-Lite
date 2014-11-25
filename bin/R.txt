@@ -1,5 +1,0 @@
-int string connect_sdk_connection_failed 0x7f020004
-int string connect_sdk_pairing_pin_prompt_tv 0x7f020003
-int string connect_sdk_pairing_simple_prompt_tv 0x7f020002
-int string connect_sdk_pairing_simple_title_tv 0x7f020001
-int string connect_sdk_picker_select_device 0x7f020000
