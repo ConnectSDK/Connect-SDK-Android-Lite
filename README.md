@@ -16,21 +16,20 @@ This project has the following dependencies.
 
 ##Including Connect SDK in your app
 
-1. Setup up your dependencies, listed above
-2. Clone Connect-SDK-Android-Lite project (or download & unzip)
-3. Open Eclipse
-4. Click File > Import
-5. Select `Existing Android Code Into Workspace` and click Next
-6. Browse to the Connect-SDK-Android-Lite project folder and click Open
-7. Click Finish
-8. Right-click the Connect-SDK-Android-Lite project and select Properties
-9. In the Library pane of the Android tab, add the following library references
-   - Connect-SDK-Android-Core
-10. **You must update these libraries to API 10 in their manifest.**
-11. Click OK
-12. Right-click your project and select Properties
-13. In the Library pane of the Android tab, add the Connect-SDK-Android-Lite project
-14. Set up your manifest file as per the instructions below
+1. Clone Connect-SDK-Android-Lite project (or download & unzip)
+2. Set up the submodules by running the following commands in Terminal from Connect-SDK-Android-Lite folder
+   - `git submodule init`
+   - `git submodule update`
+2. Open Eclipse
+3. Click `File > Import`
+4. Select `Existing Android Code Into Workspace` and click `Next`
+5. Browse to the Connect-SDK-Android-Lite project folder and click `Open`
+6. Check all projects and click `Finish`
+7. Right-click the `Connect-SDK-Android-Core` project and select `Properties`, in the `Library` pane of the `Android` tab 
+   - add Connect-SDK-Android-Lite
+8. **IN YOUR PROJECT** select `Properties`, in the `Library` pane of the `Android` tab 
+   - add Connect-SDK-Android-Core
+9. Set up your manifest file as per the instructions below
 
 ###Permissions to include in manifest
 * Required for SSDP & Zeroconf discovery
