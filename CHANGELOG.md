@@ -1,5 +1,19 @@
 # Connect SDK Android Changelog
 
+## 1.5.0 -- 08 Jul 2015
+
+- Added support Amazon Fling SDK to play and control media on Fire TV devices
+- Added playlist support for WebOS TVs
+- Added media player loop capability for WebOS
+- Extended play state subscription to handle media playback errors on WebOS TVs
+- Fixed launching input picker for new versions of WebOS TVs
+- Fixed discovery for Chromecast
+- Deprecated old media player methods
+- Miscellaneous bug fixes
+- [See commits between 1.4.4 and 1.5.0](https://github.com/ConnectSDK/Connect-SDK-Android/compare/1.4.4...1.5.0)
+
+[View files at version 1.5.0](https://github.com/ConnectSDK/Connect-SDK-Android/tree/1.5.0)
+
 ## 1.4.4 -- 29 Apr 2015
 
 - Added LG Music Flow speaker support (Google Cast for Audio and DLNA)
