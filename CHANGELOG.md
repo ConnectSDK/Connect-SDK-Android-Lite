@@ -2,7 +2,7 @@
 
 ## 1.5.0 -- 08 Jul 2015
 
-- Added support Amazon Fling SDK to play and control media on Fire TV devices
+- Added Amazon Fling SDK support to play and control media on Fire TV devices
 - Added playlist support for WebOS TVs
 - Added media player loop capability for WebOS
 - Extended play state subscription to handle media playback errors on WebOS TVs
