@@ -1,10 +1,10 @@
 # Connect SDK Android Changelog
 
-## 1.5.0 -- 08 Jul 2015
+## 1.5.0 -- 09 Jul 2015
 
 - Added Amazon Fling SDK support to play and control media on Fire TV devices
 - Added playlist support for WebOS TVs
-- Added media player loop capability for WebOS
+- Added media player loop capability for WebOS TVs
 - Added feature to pin web apps on WebOS TVs
 - Extended play state subscription to handle media playback errors on WebOS TVs
 - Fixed launching input picker for new versions of WebOS TVs
@@ -36,7 +36,6 @@
 - Added getPlayState implementation into AirPlayService
 - Implemented sending number key for NetcastTV
 - Miscellaneous bug fixes
-
 - [See commits between 1.4.2 and 1.4.3](https://github.com/ConnectSDK/Connect-SDK-Android/compare/1.4.2...1.4.3)
 
 [View files at version 1.4.3](https://github.com/ConnectSDK/Connect-SDK-Android/tree/1.4.3)
