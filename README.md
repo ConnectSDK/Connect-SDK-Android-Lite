@@ -1,5 +1,6 @@
 #Connect SDK Android Lite
 Connect SDK is an open source framework that connects your mobile apps with multiple TV platforms. Because most TV platforms support a variety of protocols, Connect SDK integrates and abstracts the discovery and connectivity between all supported protocols.
+This project can be built in Android Studio or directly with Gradle. Eclipse IDE is not supported since 1.5.0 version.
 
 This repository contains the lite version of the Connect SDK project, and does not include support for platforms that require heavy and/or external dependencies. For the full Connect SDK, clone the [main repository](https://github.com/ConnectSDK/Connect-SDK-Android).
 
@@ -19,7 +20,7 @@ Edit your project's build.gradle to add this in the "dependencies" section
 ```groovy
 dependencies {
     //...
-    compile 'com.connectsdk:connect-sdk-android-lite:1.4.+'
+    compile 'com.connectsdk:connect-sdk-android-lite:1.5.0'
 }
 ```
 ##Including Connect SDK in your app with Android Studio from sources
@@ -46,24 +47,6 @@ dependencies {
 4. Sync project with gradle files
 5. Add permissions to your manifest
 
-##Including Connect SDK in your app with Eclipse
-
-
-1. Clone Connect-SDK-Android-Lite project (or download & unzip)
-2. Set up the submodules by running the following commands in Terminal from Connect-SDK-Android-Lite folder
-   - `git submodule init`
-   - `git submodule update`
-2. Open Eclipse
-3. Click `File > Import`
-4. Select `Existing Android Code Into Workspace` and click `Next`
-5. Browse to the Connect-SDK-Android-Lite project folder and click `Open`
-6. Check all projects and click `Finish`
-7. Right-click the `Connect-SDK-Android-Core` project and select `Properties`, in the `Library` pane of the `Android` tab 
-   - add Connect-SDK-Android-Lite
-8. **IN YOUR PROJECT** select `Properties`, in the `Library` pane of the `Android` tab 
-   - add Connect-SDK-Android-Core
-9. Set up your manifest file as per the instructions below
-
 ###Permissions to include in manifest
 * Required for SSDP & Zeroconf discovery
  - `android.permission.INTERNET`
@@ -89,9 +72,21 @@ Add the following line to your proguard configuration file (otherwise `Discovery
 -keep class com.connectsdk.**       { * ; }
 ```
 
+###Tests
+Connect SDK has unit tests for some parts of the code, and we are continuing to increase the test coverage.
+These tests are based on third party libraries such as Robolectric, Mockito and PowerMock. You can easily run these tests with Gradle:
+```
+gradle test
+```
+Also the project has a target for generating test coverage report with Jacoco. Use this command for generating it.
+```
+gradle jacocoTestReport
+```
+The test coverage report will be in this folder `Connect-SDK-Android/build/reports/jacoco/jacocoTestReport/html`.
+
 ##Contact
 * Twitter [@ConnectSDK](https://www.twitter.com/ConnectSDK)
-* Ask a question with the "tv" tag on [Stack Overflow](http://stackoverflow.com/tags/tv)
+* Ask a question on Stack Overflow with the [Connect-SDK tag](https://stackoverflow.com/tags/connect-sdk) (or [TV tag](https://stackoverflow.com/tags/tv))
 * General Inquiries info@connectsdk.com
 * Developer Support support@connectsdk.com
 * Partnerships partners@connectsdk.com
@@ -104,7 +99,7 @@ Connect SDK for Android makes use of the following open-source projects.
 * [Android-DLNA](https://code.google.com/p/android-dlna/) (Apache License, Version 2.0)
 
 ##License
-Copyright (c) 2013-2014 LG Electronics.
+Copyright (c) 2013-2015 LG Electronics.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
