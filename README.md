@@ -20,7 +20,7 @@ Edit your project's build.gradle to add this in the "dependencies" section
 ```groovy
 dependencies {
     //...
-    compile 'com.connectsdk:connect-sdk-android-lite:1.5.0'
+    compile 'com.connectsdk:connect-sdk-android-lite:1.6.0'
 }
 ```
 ##Including Connect SDK in your app with Android Studio from sources
