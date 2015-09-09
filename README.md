@@ -20,7 +20,7 @@ Edit your project's build.gradle to add this in the "dependencies" section
 ```groovy
 dependencies {
     //...
-    compile 'com.connectsdk:connect-sdk-android-lite:1.5.0'
+    compile 'com.connectsdk:connect-sdk-android-lite:1.6.0'
 }
 ```
 ##Including Connect SDK in your app with Android Studio from sources
@@ -83,6 +83,14 @@ Also the project has a target for generating test coverage report with Jacoco. U
 gradle jacocoTestReport
 ```
 The test coverage report will be in this folder `Connect-SDK-Android/build/reports/jacoco/jacocoTestReport/html`.
+
+##Limitations/Caveats
+
+###Subtitles
+
+- DLNA service support `SRT` format only. Since there is no official specification for them, subtitles may not work on all DLNA-compatible devices. This feature has been tested and works on LG WebOS and Netcast TVs.
+- Netcast service support `SRT` format only. It uses DLNA and has the same restrictions as DLNA service.
+- WebOS service supports `WebVTT` format only. The server providing subtitles should support CORS headers.
 
 ##Contact
 * Twitter [@ConnectSDK](https://www.twitter.com/ConnectSDK)
