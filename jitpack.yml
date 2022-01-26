@@ -1,0 +1,7 @@
+jdk:
+  - openjdk11
+
+before_install:
+   - sdk install java 11.0.10-open
+   - sdk update
+   - sdk use java 11.0.10-open
