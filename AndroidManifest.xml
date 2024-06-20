@@ -15,6 +15,7 @@
     <!-- Permissions for Connect SDK -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA" />
 
     <application android:usesCleartextTraffic="true">
 
@@ -22,7 +23,8 @@
         <service
             android:name=".service.webos.lgcast.screenmirroring.service.MirroringService"
             android:exported="false"
-            android:foregroundServiceType="mediaProjection">
+            android:foregroundServiceType="mediaProjection"
+            android:permission="android.permission.FOREGROUND_SERVICE">
             <intent-filter>
                 <action android:name="android.intent.action.SCREEN_ON" />
                 <action android:name="android.intent.action.SCREEN_OFF" />
@@ -34,7 +36,9 @@
         <!-- LG CAST Remote Camera Service -->
         <service
             android:name=".service.webos.lgcast.remotecamera.service.CameraService"
-            android:exported="false">
+            android:exported="false"
+            android:foregroundServiceType="camera"
+            android:permission="android.permission.FOREGROUND_SERVICE">
             <intent-filter>
                 <action android:name="android.intent.action.SCREEN_ON" />
                 <action android:name="android.intent.action.SCREEN_OFF" />
