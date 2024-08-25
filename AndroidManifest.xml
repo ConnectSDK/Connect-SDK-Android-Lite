@@ -15,7 +15,6 @@
     <!-- Permissions for Connect SDK -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA" />
 
     <application android:usesCleartextTraffic="true">
 
@@ -37,7 +36,7 @@
         <service
             android:name=".service.webos.lgcast.remotecamera.service.CameraService"
             android:exported="false"
-            android:foregroundServiceType="camera"
+            android:foregroundServiceType="connectedDevice"
             android:permission="android.permission.FOREGROUND_SERVICE">
             <intent-filter>
                 <action android:name="android.intent.action.SCREEN_ON" />
